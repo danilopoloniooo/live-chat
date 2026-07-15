@@ -2,6 +2,8 @@
 
 Chat simples e global: você escolhe um nome, entra e já pode mandar mensagem pra todo mundo que estiver online. Sem salas, sem cadastro.
 
+![Preview do chat](./preview.png)
+
 ## Stack
 
 - Node.js + Express (serve os arquivos estáticos)
