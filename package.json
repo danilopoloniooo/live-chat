@@ -1,0 +1,16 @@
+{
+  "name": "live-chat",
+  "version": "1.0.0",
+  "description": "Chat global em tempo real com Node.js, Express e Socket.IO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["chat", "realtime", "socket.io", "express"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

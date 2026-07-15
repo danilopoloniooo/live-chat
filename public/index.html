@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinal — chat ao vivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA DE ENTRADA -->
+  <main id="gate" class="gate">
+    <div class="gate-card">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">SINAL</span>
+      </div>
+
+      <p class="gate-kicker">chat global · uma sala, todo mundo</p>
+      <h1 class="gate-title">Entre no ar</h1>
+
+      <form id="join-form" class="join-form">
+        <label for="name-input" class="field-label">Como você quer aparecer?</label>
+        <input
+          id="name-input"
+          class="field-input"
+          type="text"
+          placeholder="Seu nome"
+          maxlength="24"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn-primary">
+          Entrar no chat
+        </button>
+      </form>
+
+      <div class="gate-status">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="gate-online-count">—</span>
+        <span class="gate-status-label">online agora</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- TELA DE CHAT -->
+  <main id="chat" class="chat hidden">
+    <header class="chat-header">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-name">SINAL</span>
+      </div>
+
+      <div class="online-pill" title="Pessoas online agora">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="online-count">0</span>
+        <span class="online-pill-label">online</span>
+      </div>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="message-form" class="message-form">
+      <input
+        id="message-input"
+        class="message-input"
+        type="text"
+        placeholder="Escreva uma mensagem…"
+        maxlength="500"
+        autocomplete="off"
+      />
+      <button type="submit" class="btn-send" aria-label="Enviar mensagem">
+        Enviar
+      </button>
+    </form>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
