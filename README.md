@@ -8,7 +8,7 @@ Chat simples e global: você escolhe um nome, entra e já pode mandar mensagem p
 
 - Node.js + Express (serve os arquivos estáticos)
 - Socket.IO (comunicação em tempo real)
-- HTML/CSS/JS puro no front-end (sem framework)
+- HTML/CSS/JS puro no front-end (sem utilizar framework)
 
 ## Como rodar localmente
 
